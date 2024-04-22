@@ -1,1 +1,0 @@
-# javascript_jquery_class
