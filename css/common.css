@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+/* common.css
+  header, footer서식
+*/
+header{
+  position:absolute;
+  width:100%;height:70px;
+  z-index:1000;
+}
+header > h1{
+  padding:24px 0px 0px 2%;
+}
+
+/* 내비게이션 */
+.gnb{  
+  width:600px;
+  margin:-21px auto 0 auto;
+  /* transform:translateY(-21px);
+  position:relative;
+  top:-21px; */
+}
+.gnb > ul{
+  display:flex;
+  justify-content: space-around;
+}
+.gnb > ul > li > a{
+  color:var(--m_bg_color);
+  font-size:1.2rem;
+}
+.gnb > ul > li > a:hover{
+  text-decoration:underline;
+}
+header i.fas{
+  color:var(--m_bg_color);
+  position:absolute;top:22px;
+  font-size:1.6rem;
+  cursor:pointer;
+}
+.fa-user{right:5%;}
+.fa-bell{right:2%;}
+
+/* m_navi */
+#m_navi{
+  position:fixed;
+  right:20px;top:42%;
+  z-index:1000;
+  width:10px;height:160px;
+}
+#m_navi > ul{position:relative;}
+#m_navi > ul > li{
+  width:40px;height:40px;
+  border-radius:40px;
+  line-height:40px;
+  transition:0.5s;
+  background:rgb(42, 182, 241);
+  margin-top:10px;
+  /* position:absolute;right:0px; */
+  transform:translateX(-100%);
+  overflow:hidden;
+}
+#m_navi > ul > li:hover{width:200px;}
+#m_navi > ul > li:hover span{
+  background:var(--s_color01);
+}
+#m_navi > ul > li > span{
+  display:inline-block;
+  width:40px;height:40px;
+  border-radius:50%;
+  background:var(--s_color02);
+  color:var(--m_bg_color);
+  text-align:center;
+  font-weight:bold;
+}
+#m_navi > ul > li > a{
+  color:var(--m_bg_color);
+  font-size:var(--f_size2);
+  padding-left:40px;
+  line-height:160%; 
+}
+
+main{}
+
+/* 푸터서식 */
+footer{
+  background:var(--f_color1);
+  padding:40px 0px;
+  height:100px;
+}
+.f_inner{
+  width:1200px;
+  margin:0px auto;
+}
+footer h2{
+  float:left;
+  padding-top:10px;
+  width:150px;height:60px;
+}
+.f_lnb{float:left;}
+.f_lnb > ul{
+  display:flex;
+  padding-top:15px;
+}
+.f_lnb a{
+  color:#bababa;
+  padding:0px 20px;
+  border-right:1px solid #ccc;
+}
+.f_lnb li:nth-child(2) a{
+  color:var(--m_bg_color);
+}
+.f_lnb li:last-child a{border:none;}
+address{
+  clear:left;
+  line-height:20px;
+  text-transform:uppercase;
+  padding-left:170px;
+  color:var(--m_bg_color);
+}
+address dt, address dd{
+  display:inline-block;
+}
